@@ -9,5 +9,5 @@ func main() {
 	authzService := &authz.Service{}
 	userService := user.UserService{}
 	userService.AuthzService = authzService
-	authzService.UserService = userService
+	authzService.UserProvider = &userService
 }
